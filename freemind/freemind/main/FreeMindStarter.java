@@ -66,6 +66,11 @@ public class FreeMindStarter {
 		// workaround for java bug http://bugs.sun.com/bugdatabase/view_bug.do?bug_id=7075600
 		System.setProperty("java.util.Arrays.useLegacyMergeSort", "true");
 		
+		//test
+		JOptionPane.showMessageDialog(null,
+				"Freemind => starting...",
+				"message", JOptionPane.ERROR_MESSAGE);
+		
 		try {
 			java.lang.reflect.Field awtAppClassNameField =
 					xToolkit.getClass().getDeclaredField("awtAppClassName");
@@ -79,6 +84,35 @@ public class FreeMindStarter {
 			// System.err.println("Could not get awtAppClassName");
 		}
 
+//		//test
+//		JOptionPane.showMessageDialog(null,
+//				"awtAppClassNameField => done",
+//				"message", JOptionPane.ERROR_MESSAGE);
+
+		//test
+//		System.out.println("awtAppClassName => obtained");
+		
+//		String msg;
+//		String title;
+//
+//		msg = "["
+//				+ Thread.currentThread().getStackTrace()[2].getLineNumber()
+//				+ "] "
+//				+ "awtAppClassNameField => done"
+//				;
+////		msg = String.format(
+////				Locale.JAPAN, 
+////				"[%d] %s", 
+////				Thread.currentThread().getStackTrace()[2].getLineNumber(),
+////				"awtAppClassNameField => done"
+////				);
+//
+//		title = "title";
+//		JOptionPane.showMessageDialog(null, msg, title,
+//				JOptionPane.ERROR_MESSAGE);
+		
+		
+		
 		// use reflection to call :
 		// FreeMind.main(args, defaultPreferences, userPreferences,
 		// starter.getUserPreferencesFile(defaultPreferences));
