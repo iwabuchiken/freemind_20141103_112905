@@ -1,1 +1,6 @@
 C:\WORKS\WS\Eclipse_ADT\freemind_1.0.1\bin\dist\FreeMind.exe
+
+pushd C:\WORKS\WS\Eclipse_ADT\freemind_1.0.1\freemind
+ant dist
+
+C:\WORKS\WS\Eclipse_ADT\freemind_1.0.1\bin\dist\FreeMind.exe

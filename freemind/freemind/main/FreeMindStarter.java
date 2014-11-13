@@ -35,6 +35,10 @@ import java.util.Properties;
 
 import javax.swing.JOptionPane;
 
+import java.awt.color.*;
+import java.awt.Color;
+import javax.swing.UIManager;
+
 /**
  * This class should check the java version and start freemind. In order to be
  * able to check, it must be startable with java versions < 1.4. We have
@@ -66,10 +70,32 @@ public class FreeMindStarter {
 		// workaround for java bug http://bugs.sun.com/bugdatabase/view_bug.do?bug_id=7075600
 		System.setProperty("java.util.Arrays.useLegacyMergeSort", "true");
 		
-		//test
+		//test --------------------------------------
+		UIManager um = new UIManager();
+        um.put("OptionPane.messageForeground", Color.white);
+        um.put("Panel.background", Color.green);
+//        um.put("Panel.background", Color.yellow);
+        
+		String msg;
+		
+//		msg = String.format(
+////				Locale.JAPAN,
+//				"Freemind => starting...(%d)",
+//				Thread.currentThread().getStackTrace()[1].getLineNumber());
+		
+		msg = "Freemind => starting...("
+				+ Thread.currentThread().getStackTrace()[1].getFileName()
+				+ " : "
+				+ Thread.currentThread().getStackTrace()[1].getLineNumber()
+				+ ")";
+		
 		JOptionPane.showMessageDialog(null,
-				"Freemind => starting...",
+				msg,
 				"message", JOptionPane.ERROR_MESSAGE);
+		
+		System.out.println("Starting...");
+
+		//--------------------------------------
 		
 		try {
 			java.lang.reflect.Field awtAppClassNameField =
