@@ -38,6 +38,8 @@ import javax.swing.JOptionPane;
 import java.awt.color.*;
 import java.awt.Color;
 import javax.swing.UIManager;
+import java.lang.String;
+//import freemind.main.Methods;
 
 /**
  * This class should check the java version and start freemind. In order to be
@@ -95,6 +97,38 @@ public class FreeMindStarter {
 		
 		System.out.println("Starting...");
 
+		// log
+		String dpath = "log";
+		
+		File f = new File(dpath);
+		
+		if (!f.exists()) {
+			
+			boolean res = f.mkdirs();
+			
+			msg = "folder created => " + dpath;
+			
+			JOptionPane.showMessageDialog(null,
+					msg,
+					"message", JOptionPane.ERROR_MESSAGE);
+			
+		} else {
+
+			msg = "folder exists => " + dpath;
+			
+			JOptionPane.showMessageDialog(null,
+					msg,
+					"message", JOptionPane.ERROR_MESSAGE);
+
+		}
+
+		// write log
+		Methods.write_Log(
+					"freemind", 
+					Thread.currentThread().getStackTrace()[1].getFileName(),
+					Thread.currentThread().getStackTrace()[1].getLineNumber());
+		
+		
 		//--------------------------------------
 		
 		try {
