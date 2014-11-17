@@ -1,1 +1,6 @@
 [2014/11/13 20:40:11.483] [FreeMindStarter.java: 126] freemind
+[2014/11/17 20:43:18.564] [FreeMindStarter.java: 126] freemind
+[2014/11/17 20:53:21.068] [FreeMind.java: 311] freemind_version = 1.0.1; freemind_xml_version = 1.0.1
+Build: 45
+
+java_version = 1.7.0_67; os_name = Windows 7; os_version = 6.1

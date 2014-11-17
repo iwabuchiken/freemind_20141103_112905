@@ -32,21 +32,21 @@ public class Methods {
 			
 			dir_Log.mkdirs();
 			
-			// Log
-			msg = "folder created => " + dir_Log.getAbsolutePath();
-			
-			JOptionPane.showMessageDialog(null,
-					msg,
-					"message", JOptionPane.ERROR_MESSAGE);
+//			// Log
+//			msg = "folder created => " + dir_Log.getAbsolutePath();
+//			
+//			JOptionPane.showMessageDialog(null,
+//					msg,
+//					"message", JOptionPane.ERROR_MESSAGE);
 			
 		} else {
 			
-			// Log
-			msg = "folder exists => " + dir_Log.getAbsolutePath();
-			
-			JOptionPane.showMessageDialog(null,
-					msg,
-					"message", JOptionPane.ERROR_MESSAGE);
+//			// Log
+//			msg = "folder exists => " + dir_Log.getAbsolutePath();
+//			
+//			JOptionPane.showMessageDialog(null,
+//					msg,
+//					"message", JOptionPane.ERROR_MESSAGE);
 			
 		}
 		
@@ -84,12 +84,12 @@ public class Methods {
 			
 		} else {
 			
-			// Log
-			msg = "log file => exists";
-			
-			JOptionPane.showMessageDialog(null,
-					msg,
-					"message", JOptionPane.ERROR_MESSAGE);
+//			// Log
+//			msg = "log file => exists";
+//			
+//			JOptionPane.showMessageDialog(null,
+//					msg,
+//					"message", JOptionPane.ERROR_MESSAGE);
 			
 		}
 		
@@ -117,12 +117,12 @@ public class Methods {
 				
 				fpath_Log.createNewFile();
 				
-				// Log
-				msg = "new log.txt => created";
-				
-				JOptionPane.showMessageDialog(null,
-						msg,
-						"message", JOptionPane.ERROR_MESSAGE);
+//				// Log
+//				msg = "new log.txt => created";
+//				
+//				JOptionPane.showMessageDialog(null,
+//						msg,
+//						"message", JOptionPane.ERROR_MESSAGE);
 
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
@@ -169,12 +169,12 @@ public class Methods {
 			
 			fos.close();
 			
-			// Log
-			msg = "log => written";
-			
-			JOptionPane.showMessageDialog(null,
-					msg,
-					"message", JOptionPane.ERROR_MESSAGE);
+//			// Log
+//			msg = "log => written";
+//			
+//			JOptionPane.showMessageDialog(null,
+//					msg,
+//					"message", JOptionPane.ERROR_MESSAGE);
 			
 		} catch (FileNotFoundException e) {
 

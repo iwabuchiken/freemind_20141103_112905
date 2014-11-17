@@ -74,6 +74,7 @@ import javax.swing.InputMap;
 import javax.swing.JComponent;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JSplitPane;
@@ -305,6 +306,14 @@ public class FreeMind extends JFrame implements FreeMindMain {
 			info.append("; os_version = ");
 			info.append(System.getProperty("os.version"));
 			logger.info(info.toString());
+			
+			// write log
+			Methods.write_Log(
+						info.toString(), 
+						Thread.currentThread().getStackTrace()[1].getFileName(),
+						Thread.currentThread().getStackTrace()[1].getLineNumber());
+
+			
 		}
 		mFreeMindCommon = new FreeMindCommon(this);
 		Resources.createInstance(this);
@@ -873,9 +882,11 @@ public class FreeMind extends JFrame implements FreeMindMain {
 		return loggerForClass;
 	}
 
-	public static void main(final String[] args,
+	public static void 
+	main(final String[] args,
 			Properties pDefaultPreferences, Properties pUserPreferences,
 			File pAutoPropertiesFile) {
+		
 		final FreeMind frame = new FreeMind(pDefaultPreferences,
 				pUserPreferences, pAutoPropertiesFile);
 		IFreeMindSplash splash = null;
@@ -916,6 +927,7 @@ public class FreeMind extends JFrame implements FreeMindMain {
 			frame.mWindowIcon = new ImageIcon(
 					frame.getResource("images/FreeMindWindowIcon.png"));
 		}
+		
 		feedBack.setMaximumValue(10 + frame.getMaximumNumberOfMapsToLoad(args));
 		frame.init(feedBack);
 
@@ -932,19 +944,38 @@ public class FreeMind extends JFrame implements FreeMindMain {
 		frame.addWindowFocusListener(new WindowFocusListener() {
 
 			public void windowLostFocus(WindowEvent e) {
+				
+//				//debug
+//				String msg = "windowLostFocus()";
+//				
+//				JOptionPane.showMessageDialog(null,
+//						msg,
+//						"message", JOptionPane.ERROR_MESSAGE);
+				
 			}
 
 			public void windowGainedFocus(WindowEvent e) {
 				frame.getController().obtainFocusForSelected();
 				frame.removeWindowFocusListener(this);
+				
+//				//debug
+//				String msg = "windowGainedFocus()";
+//				
+//				JOptionPane.showMessageDialog(null,
+//						msg,
+//						"message", JOptionPane.ERROR_MESSAGE);
+
+				
 			}
 		});
 		frame.setVisible(true);
 		if (splash != null) {
 			splash.setVisible(false);
 		}
+		
 		frame.fireStartupDone();
-	}
+		
+	}//main
 
 	private void setupSpellChecking() {
 		boolean checkSpelling =

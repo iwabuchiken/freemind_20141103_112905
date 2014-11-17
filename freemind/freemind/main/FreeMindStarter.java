@@ -85,48 +85,48 @@ public class FreeMindStarter {
 //				"Freemind => starting...(%d)",
 //				Thread.currentThread().getStackTrace()[1].getLineNumber());
 		
-		msg = "Freemind => starting...("
-				+ Thread.currentThread().getStackTrace()[1].getFileName()
-				+ " : "
-				+ Thread.currentThread().getStackTrace()[1].getLineNumber()
-				+ ")";
+//		msg = "Freemind => starting...("
+//				+ Thread.currentThread().getStackTrace()[1].getFileName()
+//				+ " : "
+//				+ Thread.currentThread().getStackTrace()[1].getLineNumber()
+//				+ ")";
+//		
+//		JOptionPane.showMessageDialog(null,
+//				msg,
+//				"message", JOptionPane.ERROR_MESSAGE);
 		
-		JOptionPane.showMessageDialog(null,
-				msg,
-				"message", JOptionPane.ERROR_MESSAGE);
-		
-		System.out.println("Starting...");
-
-		// log
-		String dpath = "log";
-		
-		File f = new File(dpath);
-		
-		if (!f.exists()) {
-			
-			boolean res = f.mkdirs();
-			
-			msg = "folder created => " + dpath;
-			
-			JOptionPane.showMessageDialog(null,
-					msg,
-					"message", JOptionPane.ERROR_MESSAGE);
-			
-		} else {
-
-			msg = "folder exists => " + dpath;
-			
-			JOptionPane.showMessageDialog(null,
-					msg,
-					"message", JOptionPane.ERROR_MESSAGE);
-
-		}
-
-		// write log
-		Methods.write_Log(
-					"freemind", 
-					Thread.currentThread().getStackTrace()[1].getFileName(),
-					Thread.currentThread().getStackTrace()[1].getLineNumber());
+//		System.out.println("Starting...");
+//
+//		// log
+//		String dpath = "log";
+//		
+//		File f = new File(dpath);
+//		
+//		if (!f.exists()) {
+//			
+//			boolean res = f.mkdirs();
+//			
+//			msg = "folder created => " + dpath;
+//			
+//			JOptionPane.showMessageDialog(null,
+//					msg,
+//					"message", JOptionPane.ERROR_MESSAGE);
+//			
+//		} else {
+//
+//			msg = "folder exists => " + dpath;
+//			
+//			JOptionPane.showMessageDialog(null,
+//					msg,
+//					"message", JOptionPane.ERROR_MESSAGE);
+//
+//		}
+//
+//		// write log
+//		Methods.write_Log(
+//					"freemind", 
+//					Thread.currentThread().getStackTrace()[1].getFileName(),
+//					Thread.currentThread().getStackTrace()[1].getLineNumber());
 		
 		
 		//--------------------------------------
