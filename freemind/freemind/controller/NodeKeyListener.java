@@ -23,6 +23,9 @@ package freemind.controller;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
+import javax.swing.JOptionPane;
+import freemind.main.Methods;
+
 /**
  * The KeyListener which belongs to the node and cares for Events like C-D
  * (Delete Node). It forwards the requests to NodeController.
@@ -47,6 +50,26 @@ public class NodeKeyListener implements KeyListener {
 	}
 
 	public void keyPressed(KeyEvent e) {
+		
+		//test
+		String text = e.getKeyText(e.getKeyCode());
+		
+//		if (text.equals("Tab")) {
+//			
+//			String msg = "NodeKeyListener: " 
+//					+ Thread.currentThread().getStackTrace()[1].getLineNumber()
+//					+ " / "
+//					+ "key event => "
+//					+ e.getKeyText(e.getKeyCode())
+//					;
+//			
+//			String title = "Listener";
+//			JOptionPane.showMessageDialog(null, msg, title,
+//					JOptionPane.ERROR_MESSAGE);
+//			
+//		}
+		
+		
 		if (mListener != null)
 			mListener.keyPressed(e);
 	}
