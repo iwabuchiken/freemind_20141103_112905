@@ -20,3 +20,51 @@ java_version = 1.7.0_67; os_name = Windows 7; os_version = 6.1
 Build: 53
 
 java_version = 1.7.0_67; os_name = Windows 7; os_version = 6.1
+[2014/11/26 20:36:31.580] [FreeMind.java: 311] freemind_version = 1.0.1; freemind_xml_version = 1.0.1
+Build: 56
+
+java_version = 1.7.0_67; os_name = Windows 7; os_version = 6.1
+[2014/11/26 20:52:11.725] [FreeMind.java: 311] freemind_version = 1.0.1; freemind_xml_version = 1.0.1
+Build: 57
+
+java_version = 1.7.0_67; os_name = Windows 7; os_version = 6.1
+[2014/11/26 20:55:06.779] [FreeMind.java: 311] freemind_version = 1.0.1; freemind_xml_version = 1.0.1
+Build: 58
+
+java_version = 1.7.0_67; os_name = Windows 7; os_version = 6.1
+[2014/11/26 21:02:24.451] [FreeMind.java: 311] freemind_version = 1.0.1; freemind_xml_version = 1.0.1
+Build: 60
+
+java_version = 1.7.0_67; os_name = Windows 7; os_version = 6.1
+[2014/11/26 21:07:54.975] [FreeMind.java: 311] freemind_version = 1.0.1; freemind_xml_version = 1.0.1
+Build: 61
+
+java_version = 1.7.0_67; os_name = Windows 7; os_version = 6.1
+[2014/11/26 21:10:25.358] [FreeMind.java: 311] freemind_version = 1.0.1; freemind_xml_version = 1.0.1
+Build: 62
+
+java_version = 1.7.0_67; os_name = Windows 7; os_version = 6.1
+[2014/11/27 20:05:59.035] [FreeMind.java: 311] freemind_version = 1.0.1; freemind_xml_version = 1.0.1
+Build: 63
+
+java_version = 1.7.0_67; os_name = Windows 7; os_version = 6.1
+[2014/11/27 20:10:38.736] [FreeMind.java: 311] freemind_version = 1.0.1; freemind_xml_version = 1.0.1
+Build: 64
+
+java_version = 1.7.0_67; os_name = Windows 7; os_version = 6.1
+[2014/11/27 20:15:02.430] [FreeMind.java: 311] freemind_version = 1.0.1; freemind_xml_version = 1.0.1
+Build: 65
+
+java_version = 1.7.0_67; os_name = Windows 7; os_version = 6.1
+[2014/11/27 20:16:19.794] [FreeMind.java: 311] freemind_version = 1.0.1; freemind_xml_version = 1.0.1
+Build: 65
+
+java_version = 1.7.0_67; os_name = Windows 7; os_version = 6.1
+[2014/11/27 20:16:56.811] [FreeMind.java: 311] freemind_version = 1.0.1; freemind_xml_version = 1.0.1
+Build: 65
+
+java_version = 1.7.0_67; os_name = Windows 7; os_version = 6.1
+[2014/11/27 20:23:09.481] [FreeMind.java: 311] freemind_version = 1.0.1; freemind_xml_version = 1.0.1
+Build: 66
+
+java_version = 1.7.0_67; os_name = Windows 7; os_version = 6.1

@@ -25,6 +25,7 @@ import java.awt.event.KeyListener;
 import java.util.logging.Logger;
 
 import javax.swing.KeyStroke;
+import javax.swing.JOptionPane;
 
 import freemind.main.Resources;
 import freemind.modes.ModeController;
@@ -81,6 +82,17 @@ public class CommonNodeKeyListener implements KeyListener {
 		keyStrokeDown = KeyStroke.getKeyStroke(down);
 		keyStrokeLeft = KeyStroke.getKeyStroke(left);
 		keyStrokeRight = KeyStroke.getKeyStroke(right);
+		
+//		//test
+//		String msg = "[ " + Thread.currentThread().getStackTrace()[1].getFileName()
+//				+ " : "
+//				+ Thread.currentThread().getStackTrace()[1].getLineNumber()
+//				+ " ] " + "CommonNodeKeyListener => instantiated";
+//
+//		String title = "CommonNodeKeyListener";
+//		JOptionPane.showMessageDialog(null, msg, title,
+//				JOptionPane.ERROR_MESSAGE);
+		
 	}
 
 	//
@@ -91,10 +103,43 @@ public class CommonNodeKeyListener implements KeyListener {
 	}
 
 	public void keyPressed(KeyEvent e) {
+		
+		//test
+		String msg;
+		String title;
+//		
+//		msg = "[ " + Thread.currentThread().getStackTrace()[1].getFileName()
+//				+ " : "
+//				+ Thread.currentThread().getStackTrace()[1].getLineNumber()
+//				+ " ] " + "keyPressed: " + e.getKeyText(e.getKeyCode());
+//
+//		title = "CommonNodeKey";
+//		JOptionPane.showMessageDialog(null, msg, title,
+//				JOptionPane.ERROR_MESSAGE);
+//		
+//
+//		title = "title";
+//		JOptionPane.showMessageDialog(null, msg, title,
+//				JOptionPane.ERROR_MESSAGE);
+		
+
+		
 		logger.finest("Key pressend " + e.getKeyChar() + " alias " + e.getKeyCode());
 		// add to check meta keydown by koh 2004.04.16
 		if (e.isAltDown() || e.isControlDown() || e.isMetaDown()) {
+			
+//			msg = "[ " + Thread.currentThread().getStackTrace()[1].getFileName()
+//			+ " : "
+//			+ Thread.currentThread().getStackTrace()[1].getLineNumber()
+//			+ " ] " + "keyPressed: " + e.getKeyText(e.getKeyCode());
+//
+//			title = "e.isAltDown() || e.isControlDown() || e.isMetaDown()";
+//			JOptionPane.showMessageDialog(null, msg, title,
+//					JOptionPane.ERROR_MESSAGE);
+			
+			
 			return;
+			
 		}
 
 		switch (e.getKeyCode()) {
@@ -134,11 +179,44 @@ public class CommonNodeKeyListener implements KeyListener {
 
 		// printable key creates new node in edit mode (PN)
 		if (!disabledKeyType) {
+			
+//			msg = "[ " + Thread.currentThread().getStackTrace()[1].getFileName()
+//			+ " : "
+//			+ Thread.currentThread().getStackTrace()[1].getLineNumber()
+//			+ " ] " + "keyPressed: " + e.getKeyText(e.getKeyCode());
+//
+//			title = "!disabledKeyType";
+//			JOptionPane.showMessageDialog(null, msg, title,
+//					JOptionPane.ERROR_MESSAGE);
+
+			
 			if (!e.isActionKey() && e.getKeyChar() != KeyEvent.CHAR_UNDEFINED) {
+				
+//				msg = "[ " + Thread.currentThread().getStackTrace()[1].getFileName()
+//						+ " : "
+//						+ Thread.currentThread().getStackTrace()[1].getLineNumber()
+//						+ " ] " + "!e.isActionKey() and others";
+//
+//						title = "!e.isActionKey";
+//						JOptionPane.showMessageDialog(null, msg, title,
+//								JOptionPane.ERROR_MESSAGE);
+				
 				logger.finest("Starting edit mode with: " + e.getKeyChar());
 				editHandler.edit(e, keyTypeAddsNew, false);
 				return; // do not process the (sdfe) navigation
+			} else {
+				
+//				msg = "[ " + Thread.currentThread().getStackTrace()[1].getFileName()
+//						+ " : "
+//						+ Thread.currentThread().getStackTrace()[1].getLineNumber()
+//						+ " ] " + "e => isActionKey() and others";
+//
+//				title = "isActionKey";
+//				JOptionPane.showMessageDialog(null, msg, title,
+//						JOptionPane.ERROR_MESSAGE);
+
 			}
+			
 		}
 
 		// printable key used for navigation

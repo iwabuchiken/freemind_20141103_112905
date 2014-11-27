@@ -25,6 +25,8 @@ package freemind.modes.viewmodes;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
 
+import javax.swing.JOptionPane;
+
 import freemind.main.XMLElement;
 import freemind.modes.ControllerAdapter;
 import freemind.modes.MindMapNode;
@@ -61,6 +63,18 @@ public abstract class ViewControllerAdapter extends ControllerAdapter {
 		toggleChildrenFolded = new CommonToggleChildrenFoldedAction(this);
 		find = new FindAction(this);
 		findNext = new FindNextAction(this, find);
+		
+		//test
+		String msg = "[ " + Thread.currentThread().getStackTrace()[1].getFileName()
+				+ " : "
+				+ Thread.currentThread().getStackTrace()[1].getLineNumber()
+				+ " ] " + "ViewControllerAdapter => instance created";
+
+		String title = "ViewControllerAdapter";
+		JOptionPane.showMessageDialog(null, msg, title,
+				JOptionPane.ERROR_MESSAGE);
+		
+		
 	}
 
 	public void doubleClick(MouseEvent e) {
@@ -141,6 +155,17 @@ public abstract class ViewControllerAdapter extends ControllerAdapter {
 						// no edit.
 					}
 				}));
+		
+		//test
+		String msg = "[ " + Thread.currentThread().getStackTrace()[1].getFileName()
+				+ " : "
+				+ Thread.currentThread().getStackTrace()[1].getLineNumber()
+				+ " ] " + "listeners => registered";
+
+		String title = "ViewController";
+		JOptionPane.showMessageDialog(null, msg, title,
+				JOptionPane.ERROR_MESSAGE);
+		
 
 	}
 
