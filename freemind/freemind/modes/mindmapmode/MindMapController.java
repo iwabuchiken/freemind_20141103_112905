@@ -695,14 +695,27 @@ public class MindMapController extends ControllerAdapter implements
 	public void startupController() {
 		
 		//test
+//		String msg = "[ " + Thread.currentThread().getStackTrace()[1].getFileName()
+//				+ " : "
+//				+ Thread.currentThread().getStackTrace()[1].getLineNumber()
+//				+ " ] " + "startupController()";
+//
+//		String title = "startupController";
+//		JOptionPane.showMessageDialog(null, msg, title,
+//				JOptionPane.ERROR_MESSAGE);
+		
+		Object obj = getController();
+		
 		String msg = "[ " + Thread.currentThread().getStackTrace()[1].getFileName()
 				+ " : "
 				+ Thread.currentThread().getStackTrace()[1].getLineNumber()
-				+ " ] " + "startupController()";
+				+ " ] " + "class => " + obj.getClass().getName();
 
 		String title = "startupController";
 		JOptionPane.showMessageDialog(null, msg, title,
 				JOptionPane.ERROR_MESSAGE);
+		
+		
 		
 		
 		super.startupController();
