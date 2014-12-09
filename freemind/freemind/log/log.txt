@@ -76,3 +76,11 @@ java_version = 1.7.0_67; os_name = Windows 7; os_version = 6.1
 Build: 68
 
 java_version = 1.7.0_67; os_name = Windows 7; os_version = 6.1
+[2014/12/09 11:24:20.290] [FreeMind.java: 311] freemind_version = 1.0.1; freemind_xml_version = 1.0.1
+Build: 69
+
+java_version = 1.7.0_67; os_name = Windows 7; os_version = 6.1
+[2014/12/09 11:35:49.303] [FreeMind.java: 311] freemind_version = 1.0.1; freemind_xml_version = 1.0.1
+Build: 70
+
+java_version = 1.7.0_67; os_name = Windows 7; os_version = 6.1

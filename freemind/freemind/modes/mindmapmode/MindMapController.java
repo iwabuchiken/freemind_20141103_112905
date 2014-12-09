@@ -474,6 +474,18 @@ public class MindMapController extends ControllerAdapter implements
 	}
 
 	private void createStandardActions() {
+		
+		//test
+		String msg = "[ " + Thread.currentThread().getStackTrace()[1].getFileName()
+				+ " : "
+				+ Thread.currentThread().getStackTrace()[1].getLineNumber()
+				+ " ] " + "createStandardActions()";
+
+		String title = "startupController";
+		JOptionPane.showMessageDialog(null, msg, title,
+				JOptionPane.ERROR_MESSAGE);
+
+		
 		// prepare undo:
 		undo = new UndoAction(this);
 		redo = new RedoAction(this);
@@ -704,21 +716,19 @@ public class MindMapController extends ControllerAdapter implements
 //		JOptionPane.showMessageDialog(null, msg, title,
 //				JOptionPane.ERROR_MESSAGE);
 		
-		Object obj = getController();
-		
-		String msg = "[ " + Thread.currentThread().getStackTrace()[1].getFileName()
-				+ " : "
-				+ Thread.currentThread().getStackTrace()[1].getLineNumber()
-				+ " ] " + "class => " + obj.getClass().getName();
-
-		String title = "startupController";
-		JOptionPane.showMessageDialog(null, msg, title,
-				JOptionPane.ERROR_MESSAGE);
-		
-		
-		
+//		Object obj = getController();
+//
+//		String msg = "[ " + Thread.currentThread().getStackTrace()[1].getFileName()
+//				+ " : "
+//				+ Thread.currentThread().getStackTrace()[1].getLineNumber()
+//				+ " ] " + "class => " + obj.getClass().getName();
+//
+//		String title = "startupController";
+//		JOptionPane.showMessageDialog(null, msg, title,
+//				JOptionPane.ERROR_MESSAGE);
 		
 		super.startupController();
+		
 		getToolBar().startup();
 		HookFactory hookFactory = getHookFactory();
 		List pluginRegistrations = hookFactory.getRegistrations();
@@ -1570,6 +1580,18 @@ public class MindMapController extends ControllerAdapter implements
 
 	// edit begins with home/end or typing (PN 6.2)
 	public void edit(KeyEvent e, boolean addNew, boolean editLong) {
+		
+		//test
+		String msg = "[ " + Thread.currentThread().getStackTrace()[1].getFileName()
+				+ " : "
+				+ Thread.currentThread().getStackTrace()[1].getLineNumber()
+				+ " ] " + "edit()";
+
+		String title = "startupController";
+		JOptionPane.showMessageDialog(null, msg, title,
+				JOptionPane.ERROR_MESSAGE);
+
+		
 		edit.edit(e, addNew, editLong);
 	}
 
