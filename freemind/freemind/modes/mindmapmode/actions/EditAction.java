@@ -102,9 +102,40 @@ public class EditAction extends AbstractAction implements ActorXml {
 
 	// edit begins with home/end or typing (PN 6.2)
 	public void edit(KeyEvent e, boolean addNew, boolean editLong) {
+		
+		//test
+		String msg = "[ " + Thread.currentThread().getStackTrace()[1].getFileName()
+				+ " : "
+				+ Thread.currentThread().getStackTrace()[1].getLineNumber()
+				+ " ] " + "edit(KeyEvent, boolean, boolean)";
+
+		String title = "edit";
+		JOptionPane.showMessageDialog(null, msg, title,
+				JOptionPane.ERROR_MESSAGE);
+		
+		
 		NodeView selectedNodeView = mMindMapController.getView().getSelected();
 		if (selectedNodeView != null) {
 			if (e == null || !addNew) {
+				
+//				//test
+//				msg = "[ "
+//						+ Thread.currentThread().getStackTrace()[1]
+//								.getFileName()
+//						+ " : "
+//						+ Thread.currentThread().getStackTrace()[1]
+//								.getLineNumber() + " ] " 
+//						+ "calling => edit(6 params)"
+//						+ " / "
+//						+ "addNew = " + addNew
+//						+ " / "
+//						+ "keyevent => " + e;
+//
+//				title = "title";
+//				JOptionPane.showMessageDialog(null, msg, title,
+//						JOptionPane.ERROR_MESSAGE);
+				
+				
 				edit(selectedNodeView, selectedNodeView, e, false, false,
 						editLong);
 			} else if (!mMindMapController.isBlocked()) {
@@ -123,6 +154,18 @@ public class EditAction extends AbstractAction implements ActorXml {
 		if (node == null) {
 			return;
 		}
+		
+		//test
+		String msg = "[ " + Thread.currentThread().getStackTrace()[1].getFileName()
+				+ " : "
+				+ Thread.currentThread().getStackTrace()[1].getLineNumber()
+				+ " ] " + "edit()";
+
+		String title = "edit";
+		JOptionPane.showMessageDialog(null, msg, title,
+				JOptionPane.ERROR_MESSAGE);
+		
+		
 		final MapView map = node.getMap();
 		map.validate();
 		map.invalidate();
@@ -292,7 +335,7 @@ public class EditAction extends AbstractAction implements ActorXml {
 		mCurrentEditDialog = textfield;
 		textfield.show();
 
-	}
+	}//edit
 
 	public void setNodeText(MindMapNode selected, String newText) {
 		String oldText = selected.toString();

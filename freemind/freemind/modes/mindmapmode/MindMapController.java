@@ -475,15 +475,15 @@ public class MindMapController extends ControllerAdapter implements
 
 	private void createStandardActions() {
 		
-		//test
-		String msg = "[ " + Thread.currentThread().getStackTrace()[1].getFileName()
-				+ " : "
-				+ Thread.currentThread().getStackTrace()[1].getLineNumber()
-				+ " ] " + "createStandardActions()";
-
-		String title = "startupController";
-		JOptionPane.showMessageDialog(null, msg, title,
-				JOptionPane.ERROR_MESSAGE);
+//		//test
+//		String msg = "[ " + Thread.currentThread().getStackTrace()[1].getFileName()
+//				+ " : "
+//				+ Thread.currentThread().getStackTrace()[1].getLineNumber()
+//				+ " ] " + "createStandardActions()";
+//
+//		String title = "startupController";
+//		JOptionPane.showMessageDialog(null, msg, title,
+//				JOptionPane.ERROR_MESSAGE);
 
 		
 		// prepare undo:
@@ -1585,7 +1585,7 @@ public class MindMapController extends ControllerAdapter implements
 		String msg = "[ " + Thread.currentThread().getStackTrace()[1].getFileName()
 				+ " : "
 				+ Thread.currentThread().getStackTrace()[1].getLineNumber()
-				+ " ] " + "edit()";
+				+ " ] " + "edit(): editLong = " + editLong;
 
 		String title = "startupController";
 		JOptionPane.showMessageDialog(null, msg, title,
