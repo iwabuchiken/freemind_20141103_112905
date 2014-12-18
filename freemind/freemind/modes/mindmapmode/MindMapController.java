@@ -1590,7 +1590,6 @@ public class MindMapController extends ControllerAdapter implements
 		String title = "startupController";
 		JOptionPane.showMessageDialog(null, msg, title,
 				JOptionPane.ERROR_MESSAGE);
-
 		
 		edit.edit(e, addNew, editLong);
 	}

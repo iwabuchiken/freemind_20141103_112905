@@ -103,6 +103,9 @@ public class EditAction extends AbstractAction implements ActorXml {
 	// edit begins with home/end or typing (PN 6.2)
 	public void edit(KeyEvent e, boolean addNew, boolean editLong) {
 		
+		String msg;
+		String title;
+		
 //		//test
 //		String msg = "[ " + Thread.currentThread().getStackTrace()[1].getFileName()
 //				+ " : "
@@ -115,6 +118,18 @@ public class EditAction extends AbstractAction implements ActorXml {
 		
 		
 		NodeView selectedNodeView = mMindMapController.getView().getSelected();
+		
+//		//test
+//		msg = "[ " + Thread.currentThread().getStackTrace()[1].getFileName()
+//				+ " : "
+//				+ Thread.currentThread().getStackTrace()[1].getLineNumber()
+//				+ " ] " + "selectedNodeView => " + selectedNodeView.getModel().toString();
+//
+//		title = "title";
+//		JOptionPane.showMessageDialog(null, msg, title,
+//				JOptionPane.ERROR_MESSAGE);
+		
+		
 		if (selectedNodeView != null) {
 			if (e == null || !addNew) {
 				
@@ -155,6 +170,9 @@ public class EditAction extends AbstractAction implements ActorXml {
 			return;
 		}
 		
+		String msg;
+		String title;
+		
 //		//test
 //		String msg = "[ " + Thread.currentThread().getStackTrace()[1].getFileName()
 //				+ " : "
@@ -190,6 +208,17 @@ public class EditAction extends AbstractAction implements ActorXml {
 
 		String text = node.getModel().toString();
 		
+//		//test
+//		msg = "[ " + Thread.currentThread().getStackTrace()[1].getFileName()
+//				+ " : "
+//				+ Thread.currentThread().getStackTrace()[1].getLineNumber()
+//				+ " ] " + "text => " + text;
+//
+//		title = "title";
+//		JOptionPane.showMessageDialog(null, msg, title,
+//				JOptionPane.ERROR_MESSAGE);
+		
+		
 		String htmlEditingOption = mMindMapController.getController()
 				.getProperty("html_editing_option");
 
@@ -201,7 +230,7 @@ public class EditAction extends AbstractAction implements ActorXml {
 		String useRichTextInNewLongNodes = (isHtmlNode) ? "true" : "false";
 		
 		//test
-		String msg = "[ " + Thread.currentThread().getStackTrace()[1].getFileName()
+		msg = "[ " + Thread.currentThread().getStackTrace()[1].getFileName()
 				+ " : "
 				+ Thread.currentThread().getStackTrace()[1].getLineNumber()
 				+ " ] " 
@@ -213,7 +242,7 @@ public class EditAction extends AbstractAction implements ActorXml {
 				+ " / "
 				+ "useRichTextInNewLongNodes => " + useRichTextInNewLongNodes;
 
-		String title = "title";
+		title = "title";
 		
 		JOptionPane.showMessageDialog(null, msg, title,
 				JOptionPane.ERROR_MESSAGE);
@@ -397,6 +426,17 @@ public class EditAction extends AbstractAction implements ActorXml {
 					}
 
 					public void ok(String newText) {
+						
+//						//test
+//						String msg = "[ " + Thread.currentThread().getStackTrace()[1].getFileName()
+//								+ " : "
+//								+ Thread.currentThread().getStackTrace()[1].getLineNumber()
+//								+ " ] " + "newText => " + newText;
+//
+//						String title = "title";
+//						JOptionPane.showMessageDialog(null, msg, title,
+//								JOptionPane.ERROR_MESSAGE);
+
 						setNodeText(node.getModel(), newText);
 						endEdit();
 					}
