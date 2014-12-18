@@ -256,7 +256,9 @@ public class MapView extends JPanel implements Printable, Autoscroll {
 
 	private MindMap model;
 	private NodeView rootView = null;
+	
 	private Selected selected = new Selected();
+	
 	private Controller controller = null;
 	private float zoom = 1F;
 	private boolean disableMoveCursor = true;
@@ -1006,6 +1008,17 @@ public class MapView extends JPanel implements Printable, Autoscroll {
 			return null;
 	}
 
+	//debug 18/12/2014 11:58:26
+	public int _get_SizeOf_Selected() {
+		
+		if (selected.size() > 0)
+			return selected.size();
+		else
+			
+			return -1;
+		
+	}
+	
 	private NodeView getSelected(int i) {
 		return selected.get(i);
 	}

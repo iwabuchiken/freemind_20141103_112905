@@ -119,15 +119,21 @@ public class EditAction extends AbstractAction implements ActorXml {
 		
 		NodeView selectedNodeView = mMindMapController.getView().getSelected();
 		
-//		//test
-//		msg = "[ " + Thread.currentThread().getStackTrace()[1].getFileName()
-//				+ " : "
-//				+ Thread.currentThread().getStackTrace()[1].getLineNumber()
-//				+ " ] " + "selectedNodeView => " + selectedNodeView.getModel().toString();
-//
-//		title = "title";
-//		JOptionPane.showMessageDialog(null, msg, title,
-//				JOptionPane.ERROR_MESSAGE);
+		//test
+		int temp_i = mMindMapController.getView()._get_SizeOf_Selected();
+		
+		msg = "[ " + Thread.currentThread().getStackTrace()[1].getFileName()
+				+ " : "
+				+ Thread.currentThread().getStackTrace()[1].getLineNumber()
+				+ " ] " + "selectedNodeView => " + selectedNodeView.getModel().toString()
+				+ "(size = "
+				+ temp_i
+				+ ")"
+				;
+
+		title = "title";
+		JOptionPane.showMessageDialog(null, msg, title,
+				JOptionPane.ERROR_MESSAGE);
 		
 		
 		if (selectedNodeView != null) {
