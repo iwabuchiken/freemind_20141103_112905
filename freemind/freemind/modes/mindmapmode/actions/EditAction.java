@@ -103,15 +103,15 @@ public class EditAction extends AbstractAction implements ActorXml {
 	// edit begins with home/end or typing (PN 6.2)
 	public void edit(KeyEvent e, boolean addNew, boolean editLong) {
 		
-		//test
-		String msg = "[ " + Thread.currentThread().getStackTrace()[1].getFileName()
-				+ " : "
-				+ Thread.currentThread().getStackTrace()[1].getLineNumber()
-				+ " ] " + "edit(KeyEvent, boolean, boolean)";
-
-		String title = "edit";
-		JOptionPane.showMessageDialog(null, msg, title,
-				JOptionPane.ERROR_MESSAGE);
+//		//test
+//		String msg = "[ " + Thread.currentThread().getStackTrace()[1].getFileName()
+//				+ " : "
+//				+ Thread.currentThread().getStackTrace()[1].getLineNumber()
+//				+ " ] " + "edit(KeyEvent, boolean, boolean)";
+//
+//		String title = "edit";
+//		JOptionPane.showMessageDialog(null, msg, title,
+//				JOptionPane.ERROR_MESSAGE);
 		
 		
 		NodeView selectedNodeView = mMindMapController.getView().getSelected();
@@ -155,15 +155,27 @@ public class EditAction extends AbstractAction implements ActorXml {
 			return;
 		}
 		
-		//test
-		String msg = "[ " + Thread.currentThread().getStackTrace()[1].getFileName()
-				+ " : "
-				+ Thread.currentThread().getStackTrace()[1].getLineNumber()
-				+ " ] " + "edit()";
-
-		String title = "edit";
-		JOptionPane.showMessageDialog(null, msg, title,
-				JOptionPane.ERROR_MESSAGE);
+//		//test
+//		String msg = "[ " + Thread.currentThread().getStackTrace()[1].getFileName()
+//				+ " : "
+//				+ Thread.currentThread().getStackTrace()[1].getLineNumber()
+//				+ " ] " + "edit()";
+//
+//		String title = "edit";
+//		JOptionPane.showMessageDialog(null, msg, title,
+//				JOptionPane.ERROR_MESSAGE);
+		
+//		//test
+//		String msg = "[ " + Thread.currentThread().getStackTrace()[1].getFileName()
+//				+ " : "
+//				+ Thread.currentThread().getStackTrace()[1].getLineNumber()
+//				+ " ] " + "node.getText() => " + node.getText();
+			//=> "NodeView"
+//
+//		String title = "title";
+//		
+//		JOptionPane.showMessageDialog(null, msg, title,
+//				JOptionPane.ERROR_MESSAGE);
 		
 		
 		final MapView map = node.getMap();
@@ -171,21 +183,45 @@ public class EditAction extends AbstractAction implements ActorXml {
 		map.invalidate();
 
 		stopEditing();
+		
+		
 		// EditNodeBase.closeEdit();
 		mMindMapController.setBlocked(true); // locally "modal" stated
 
 		String text = node.getModel().toString();
+		
 		String htmlEditingOption = mMindMapController.getController()
 				.getProperty("html_editing_option");
 
 		boolean isHtmlNode = HtmlTools.isHtmlNode(text);
+		
 		boolean isLongNode = node.getIsLong();
 
 		// do we need a decision if plain or HTML editing?
 		String useRichTextInNewLongNodes = (isHtmlNode) ? "true" : "false";
+		
+		//test
+		String msg = "[ " + Thread.currentThread().getStackTrace()[1].getFileName()
+				+ " : "
+				+ Thread.currentThread().getStackTrace()[1].getLineNumber()
+				+ " ] " 
+				+ "isLongNode => " + isLongNode
+				+ " / "
+				+ "isHtmlNode => " + isHtmlNode
+				+ " / "
+				+ "editLong => " + editLong
+				+ " / "
+				+ "useRichTextInNewLongNodes => " + useRichTextInNewLongNodes;
+
+		String title = "title";
+		
+		JOptionPane.showMessageDialog(null, msg, title,
+				JOptionPane.ERROR_MESSAGE);
+
+		
 		// if the node is not already html, we ask if rich text or plain text
 		// edit.
-		if (!isHtmlNode && !isLongNode && editLong) {
+//		if (!isHtmlNode && !isLongNode && editLong) {
 			// ask user:
 			int showResult = new OptionalDontShowMeAgainDialog(
 					mMindMapController.getFrame().getJFrame(),
@@ -200,7 +236,19 @@ public class EditAction extends AbstractAction implements ActorXml {
 					.show().getResult();
 			useRichTextInNewLongNodes = (showResult == JOptionPane.OK_OPTION) ? "true"
 					: "false";
-		}
+//		}
+			
+		//test
+		msg = "[ " + Thread.currentThread().getStackTrace()[1].getFileName()
+				+ " : "
+				+ Thread.currentThread().getStackTrace()[1].getLineNumber()
+				+ " ] " + "showResult => " + showResult;
+
+		title = "title";
+		JOptionPane.showMessageDialog(null, msg, title,
+				JOptionPane.ERROR_MESSAGE);
+		
+			
 		// useRichTextInNewLongNodes =
 		// c.getController().getProperty("use_rich_text_in_new_long_nodes");
 		boolean editHtml = isHtmlNode

@@ -112,3 +112,47 @@ java_version = 1.7.0_67; os_name = Windows 7; os_version = 6.1
 Build: 79
 
 java_version = 1.7.0_67; os_name = Windows 7; os_version = 6.1
+[2014/12/16 18:56:24.601] [FreeMind.java: 311] freemind_version = 1.0.1; freemind_xml_version = 1.0.1
+Build: 79
+
+java_version = 1.7.0_67; os_name = Windows 7; os_version = 6.1
+[2014/12/16 19:01:42.678] [FreeMind.java: 311] freemind_version = 1.0.1; freemind_xml_version = 1.0.1
+Build: 80
+
+java_version = 1.7.0_67; os_name = Windows 7; os_version = 6.1
+[2014/12/16 19:04:33.445] [FreeMind.java: 311] freemind_version = 1.0.1; freemind_xml_version = 1.0.1
+Build: 81
+
+java_version = 1.7.0_67; os_name = Windows 7; os_version = 6.1
+[2014/12/16 19:07:24.917] [FreeMind.java: 311] freemind_version = 1.0.1; freemind_xml_version = 1.0.1
+Build: 82
+
+java_version = 1.7.0_67; os_name = Windows 7; os_version = 6.1
+[2014/12/16 19:10:54.714] [FreeMind.java: 311] freemind_version = 1.0.1; freemind_xml_version = 1.0.1
+Build: 83
+
+java_version = 1.7.0_67; os_name = Windows 7; os_version = 6.1
+[2014/12/18 10:01:44.828] [FreeMind.java: 311] freemind_version = 1.0.1; freemind_xml_version = 1.0.1
+Build: 83
+
+java_version = 1.7.0_67; os_name = Windows 7; os_version = 6.1
+[2014/12/18 10:05:40.448] [FreeMind.java: 311] freemind_version = 1.0.1; freemind_xml_version = 1.0.1
+Build: 84
+
+java_version = 1.7.0_67; os_name = Windows 7; os_version = 6.1
+[2014/12/18 10:08:23.330] [FreeMind.java: 311] freemind_version = 1.0.1; freemind_xml_version = 1.0.1
+Build: 85
+
+java_version = 1.7.0_67; os_name = Windows 7; os_version = 6.1
+[2014/12/18 10:12:39.622] [FreeMind.java: 311] freemind_version = 1.0.1; freemind_xml_version = 1.0.1
+Build: 86
+
+java_version = 1.7.0_67; os_name = Windows 7; os_version = 6.1
+[2014/12/18 10:15:04.180] [FreeMind.java: 311] freemind_version = 1.0.1; freemind_xml_version = 1.0.1
+Build: 87
+
+java_version = 1.7.0_67; os_name = Windows 7; os_version = 6.1
+[2014/12/18 10:18:42.322] [FreeMind.java: 311] freemind_version = 1.0.1; freemind_xml_version = 1.0.1
+Build: 88
+
+java_version = 1.7.0_67; os_name = Windows 7; os_version = 6.1
