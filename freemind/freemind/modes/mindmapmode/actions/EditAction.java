@@ -221,7 +221,7 @@ public class EditAction extends AbstractAction implements ActorXml {
 		
 		// if the node is not already html, we ask if rich text or plain text
 		// edit.
-//		if (!isHtmlNode && !isLongNode && editLong) {
+		if (!isHtmlNode && !isLongNode && editLong) {
 			// ask user:
 			int showResult = new OptionalDontShowMeAgainDialog(
 					mMindMapController.getFrame().getJFrame(),
@@ -233,20 +233,21 @@ public class EditAction extends AbstractAction implements ActorXml {
 							mMindMapController.getController(),
 							FreeMind.RESOURCES_REMIND_USE_RICH_TEXT_IN_NEW_LONG_NODES),
 					OptionalDontShowMeAgainDialog.BOTH_OK_AND_CANCEL_OPTIONS_ARE_STORED)
-					.show().getResult();
+//					.show();
+			.show().getResult();
 			useRichTextInNewLongNodes = (showResult == JOptionPane.OK_OPTION) ? "true"
 					: "false";
-//		}
+		}
 			
-		//test
-		msg = "[ " + Thread.currentThread().getStackTrace()[1].getFileName()
-				+ " : "
-				+ Thread.currentThread().getStackTrace()[1].getLineNumber()
-				+ " ] " + "showResult => " + showResult;
-
-		title = "title";
-		JOptionPane.showMessageDialog(null, msg, title,
-				JOptionPane.ERROR_MESSAGE);
+//		//test
+//		msg = "[ " + Thread.currentThread().getStackTrace()[1].getFileName()
+//				+ " : "
+//				+ Thread.currentThread().getStackTrace()[1].getLineNumber()
+//				+ " ] " + "showResult => " + showResult;
+//
+//		title = "title";
+//		JOptionPane.showMessageDialog(null, msg, title,
+//				JOptionPane.ERROR_MESSAGE);
 		
 			
 		// useRichTextInNewLongNodes =
@@ -259,6 +260,24 @@ public class EditAction extends AbstractAction implements ActorXml {
 		boolean editExternal = editHtml
 				&& Tools.safeEquals(htmlEditingOption, "external");
 
+//		//test
+//		msg = "[ " + Thread.currentThread().getStackTrace()[1].getFileName()
+//				+ " : "
+//				+ Thread.currentThread().getStackTrace()[1].getLineNumber()
+//				+ " ] " 
+//				+ "editHtml => " + editHtml
+//				+ " / "
+//				+ "editInternalWysiwyg => " + editInternalWysiwyg
+//				+ " / "
+//				+ "editExternal => " + editExternal
+//				;
+//
+//		title = "title";
+//		JOptionPane.showMessageDialog(null, msg, title,
+//				JOptionPane.ERROR_MESSAGE);
+//		
+//						//=> false, false, false
+		
 		if (editHtml && !isHtmlNode) {
 			text = HtmlTools.plainToHTML(text);
 		}
@@ -344,6 +363,17 @@ public class EditAction extends AbstractAction implements ActorXml {
 			nodeEditDialog.show();
 			return;
 		}
+		
+//		//test
+//		msg = "[ " + Thread.currentThread().getStackTrace()[1].getFileName()
+//				+ " : "
+//				+ Thread.currentThread().getStackTrace()[1].getLineNumber()
+//				+ " ] " + "ifs => passed";
+//
+//		title = "title";
+//		JOptionPane.showMessageDialog(null, msg, title,
+//				JOptionPane.ERROR_MESSAGE);
+
 		// inline editing:
 		EditNodeTextField textfield = new EditNodeTextField(node, text,
 				firstEvent, mMindMapController, new EditNodeBase.EditControl() {
@@ -381,6 +411,17 @@ public class EditAction extends AbstractAction implements ActorXml {
 					}
 				});
 		mCurrentEditDialog = textfield;
+		
+		//test
+		msg = "[ " + Thread.currentThread().getStackTrace()[1].getFileName()
+				+ " : "
+				+ Thread.currentThread().getStackTrace()[1].getLineNumber()
+				+ " ] " + "textfield => created";
+
+		title = "title";
+		JOptionPane.showMessageDialog(null, msg, title,
+				JOptionPane.ERROR_MESSAGE);
+		
 		textfield.show();
 
 	}//edit
