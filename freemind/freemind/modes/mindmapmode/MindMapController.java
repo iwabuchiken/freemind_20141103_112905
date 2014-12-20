@@ -2090,12 +2090,41 @@ public class MindMapController extends ControllerAdapter implements
 															 */
 		boolean retValue = false;
 
+		String msg;
+		String title;
+		
+		//test
+		msg = "[ " + Thread.currentThread().getStackTrace()[1].getFileName()
+				+ " : "
+				+ Thread.currentThread().getStackTrace()[1].getLineNumber()
+				+ " ] " + "extendSelection";
+
+		title = "title";
+		JOptionPane.showMessageDialog(null, msg, title,
+				JOptionPane.ERROR_MESSAGE);
+
+		
 		if (extend || range || branch
 				|| !getView().isSelected(newlySelectedNodeView)) {
 			if (!range) {
 				if (extend)
 					getView().toggleSelected(newlySelectedNodeView);
 				else
+					
+					//test
+					msg = "[ " + Thread.currentThread().getStackTrace()[1].getFileName()
+							+ " : "
+							+ Thread.currentThread().getStackTrace()[1].getLineNumber()
+							+ " ] " 
+							+ "extendSelection: calling select()"
+							+ " / "
+							+ "newlySelectedNodeView => "
+							+ newlySelectedNodeView.getModel().toString();
+
+					title = "title";
+					JOptionPane.showMessageDialog(null, msg, title,
+							JOptionPane.ERROR_MESSAGE);
+
 					select(newlySelectedNodeView);
 				retValue = true;
 			} else {

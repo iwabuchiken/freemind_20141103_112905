@@ -659,6 +659,20 @@ public abstract class ControllerAdapter implements ModeController,
 	}
 
 	public void select(NodeView node) {
+		
+		String msg;
+		String title;
+		
+		//test
+		msg = "[ " + Thread.currentThread().getStackTrace()[1].getFileName()
+				+ " : "
+				+ Thread.currentThread().getStackTrace()[1].getLineNumber()
+				+ " ] " + "select(NodeView node)";
+
+		title = "title";
+		JOptionPane.showMessageDialog(null, msg, title,
+				JOptionPane.ERROR_MESSAGE);
+		
 		if (node == null) {
 			logger.warning("Select with null NodeView called!");
 			return;

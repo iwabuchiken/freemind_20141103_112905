@@ -51,6 +51,10 @@ import javax.swing.event.TreeModelEvent;
 import javax.swing.event.TreeModelListener;
 import javax.swing.tree.TreeNode;
 
+import javax.swing.JOptionPane;
+import javax.swing.SwingUtilities;;
+
+
 import freemind.controller.Controller;
 import freemind.main.FreeMind;
 import freemind.main.FreeMindMain;
@@ -1422,6 +1426,21 @@ public class NodeView extends JComponent implements TreeModelListener {
 	 * event.TreeModelEvent)
 	 */
 	public void treeStructureChanged(TreeModelEvent e) {
+		
+		String msg;
+		String title;
+		
+		//test
+		msg = "[ " + Thread.currentThread().getStackTrace()[1].getFileName()
+				+ " : "
+				+ Thread.currentThread().getStackTrace()[1].getLineNumber()
+				+ " ] " + "treeStructureChanged";
+
+		title = "title";
+		JOptionPane.showMessageDialog(null, msg, title,
+				JOptionPane.ERROR_MESSAGE);
+
+		
 		getMap().resetShiftSelectionOrigin();
 		for (ListIterator i = getChildrenViews().listIterator(); i.hasNext();) {
 			((NodeView) i.next()).remove();
@@ -1432,6 +1451,20 @@ public class NodeView extends JComponent implements TreeModelListener {
 		}
 		map.revalidateSelecteds();
 		revalidate();
+
+//		//test
+//		msg = "[ " + Thread.currentThread().getStackTrace()[1].getFileName()
+//				+ " : "
+//				+ Thread.currentThread().getStackTrace()[1].getLineNumber()
+//				+ " ] " 
+//				+ "SwingUtilities.isEventDispatchThread() => "
+//				+ SwingUtilities.isEventDispatchThread();
+//
+//		title = "title";
+//		JOptionPane.showMessageDialog(null, msg, title,
+//				JOptionPane.ERROR_MESSAGE);
+		
+		
 	}
 
 	public int getZoomedFoldingSymbolHalfWidth() {

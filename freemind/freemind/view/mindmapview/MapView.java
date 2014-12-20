@@ -62,6 +62,8 @@ import javax.swing.JScrollPane;
 import javax.swing.JViewport;
 import javax.swing.KeyStroke;
 
+import javax.swing.JOptionPane;
+
 import freemind.controller.Controller;
 import freemind.controller.NodeKeyListener;
 import freemind.controller.NodeMotionListener;
@@ -785,6 +787,21 @@ public class MapView extends JPanel implements Printable, Autoscroll {
 	 * Select the node, resulting in only that one being selected.
 	 */
 	public void selectAsTheOnlyOneSelected(NodeView newSelected) {
+		
+		String msg;
+		String title;
+		
+		//test
+		msg = "[ " + Thread.currentThread().getStackTrace()[1].getFileName()
+				+ " : "
+				+ Thread.currentThread().getStackTrace()[1].getLineNumber()
+				+ " ] " + "selectAsTheOnlyOneSelected";
+
+		title = "title";
+		JOptionPane.showMessageDialog(null, msg, title,
+				JOptionPane.ERROR_MESSAGE);
+		
+		
 		logger.finest("selectAsTheOnlyOneSelected");
 		LinkedList oldSelecteds = getSelecteds();
 		// select new node
